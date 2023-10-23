@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var username = document.getElementById("uname")
+            var password = document.getElementById("password")
+            var error = document.getElementById("errormsg")
+            if(uname.value.trim()=="" ){
+                // alert("do not keep username  blank");
+                uname.style.border = "solid 1px red";
+                error.style.visibility="visible";
+                return false;
+            }
+            else if(password.value.trim()==""){
+                // alert("do not keep Password  blank");
+                password.style.border = "solid 1px red";
+                error.style.visibility="visible";
+                return false;
+            }
+            else if(password.value.trim().length<5){
+                alert("Password is too short");
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form  onsubmit="return validate()" action="message.html">
+        <h2>Form Validate </h2>
+        <p id="errormsg" style="color: red; visibility: hidden;"> Some fields are empty</p>
+        <label for="username" id="unamelabel">User Name</label>
+        <input type="username" id="uname">
+        <label for="password" id="passwordlabel">Password</label>
+        <input type="password" id="password">
+        <button>submit</button>
+    </form>
+</body>
+</html>
