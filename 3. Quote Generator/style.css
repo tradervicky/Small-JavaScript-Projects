@@ -1,0 +1,30 @@
+
+.container{
+    background-color: aqua;
+    border: 1px solid black;
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.quotes{
+  border: 10px solid #f4d1ae;  
+  width: 900px;
+  height: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  color: gray;
+  background-color: #f4edea;
+}
+.quotes p, h3{
+    font-size: 1.5rem;
+}
+@media(max-width:480px){
+    .quotes p, h3{
+        font-size: 1rem;
+    }
+}
